@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kaushik Mandal — pick a design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0d12;
+  --ink:#f4f3fa;
+  --muted:#a4a3b8;
+  --dim:#5a596d;
+  --line:rgba(255,255,255,.1);
+  --card:rgba(255,255,255,.04);
+  --card-strong:rgba(255,255,255,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(circle at 20% 10%,rgba(124,92,255,.18),transparent 50%),
+  radial-gradient(circle at 80% 30%,rgba(255,94,160,.15),transparent 55%),
+  radial-gradient(circle at 50% 90%,rgba(92,255,211,.1),transparent 50%)}
+
+.wrap{max-width:1100px;margin:0 auto;padding:5rem 1.5rem 4rem}
+header{text-align:center;margin-bottom:4rem}
+.kicker{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:.35rem .85rem;border:1px solid var(--line);border-radius:999px;margin-bottom:1.5rem;background:var(--card);backdrop-filter:blur(10px)}
+h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;letter-spacing:-.025em;margin-bottom:1.25rem}
+h1 em{font-style:italic;background:linear-gradient(135deg,#ff5ea0,#7c5cff,#5cffd3);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:flow 8s ease infinite}
+@keyframes flow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.sub{font-size:1.15rem;color:var(--muted);max-width:600px;margin:0 auto 2rem}
+.meta{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;color:var(--dim);font-size:.85rem;font-family:'JetBrains Mono',monospace}
+.meta span strong{color:var(--ink);font-weight:500}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:1.5rem;margin-bottom:4rem}
+.card{position:relative;display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);transition:all .3s ease;cursor:pointer}
+.card:hover{transform:translateY(-4px);background:var(--card-strong);border-color:rgba(124,92,255,.4);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.preview{aspect-ratio:16/10;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+
+/* Preview 1: cyberpunk */
+.preview-1{background:radial-gradient(circle at 25% 25%,rgba(179,75,255,.45),transparent 50%),radial-gradient(circle at 75% 75%,rgba(75,208,255,.4),transparent 55%),radial-gradient(circle at 50% 100%,rgba(255,75,141,.3),transparent 60%),#050510}
+.preview-1::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(120,130,220,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(120,130,220,.08) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 70%)}
+.preview-1 .pv-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:'JetBrains Mono',monospace;text-align:center}
+.preview-1 .pv-name{font-family:'Inter',sans-serif;font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,#b34bff,#4bd0ff,#ff4b8d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.02em}
+.preview-1 .pv-sub{font-size:.7rem;color:#9ca0c8;margin-top:.4rem;letter-spacing:.1em}
+
+/* Preview 2: glass */
+.preview-2{background:radial-gradient(circle at 20% 10%,rgba(255,201,164,.55),transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,122,138,.5),transparent 55%),radial-gradient(circle at 50% 90%,rgba(124,92,255,.4),transparent 55%),#fbfaf7}
+.preview-2 .pv-text{position:absolute;inset:0;padding:1.5rem;display:flex;flex-direction:column;justify-content:center;color:#1a1a1f}
+.preview-2 .pv-eyebrow{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#6b6e78;margin-bottom:.5rem}
+.preview-2 .pv-name{font-family:'Fraunces',serif;font-weight:500;font-size:1.8rem;line-height:1.05;letter-spacing:-.02em}
+.preview-2 .pv-name em{font-style:italic;background:linear-gradient(120deg,#7c5cff,#ff7a8a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* Preview 3: terminal */
+.preview-3{background:#020806;font-family:'JetBrains Mono',monospace;padding:1rem 1.25rem;color:#e0fce6;font-size:.65rem;line-height:1.6;overflow:hidden}
+.preview-3 .green{color:#00ff95;text-shadow:0 0 4px #00ff95}
+.preview-3 .cyan{color:#7afff0}
+.preview-3 .amber{color:#ffb86c}
+.preview-3 .dim{color:#3a5e4b}
+
+/* Preview 4: 3D */
+.preview-4{background:radial-gradient(at 20% 25%,rgba(255,94,160,.3),transparent 50%),radial-gradient(at 80% 20%,rgba(124,92,255,.35),transparent 55%),radial-gradient(at 75% 80%,rgba(92,255,211,.2),transparent 55%),#0d0c14}
+.preview-4 .pv-grid{position:absolute;inset:0;display:grid;grid-template-columns:1.4fr 1fr;align-items:center;padding:1.5rem;gap:1rem}
+.preview-4 .pv-name{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.4rem;line-height:.9;letter-spacing:-.04em;color:#f0eef7}
+.preview-4 .pv-name .outline{-webkit-text-stroke:1.5px #f0eef7;-webkit-text-fill-color:transparent;background:linear-gradient(135deg,#ff5ea0,#7c5cff,#5cffd3);-webkit-background-clip:text;background-clip:text;background-size:200% 200%}
+.preview-4 .pv-orb{width:90px;height:90px;border-radius:50%;background:conic-gradient(from 0deg,#ff5ea0,#7c5cff,#5cffd3,#ffc94d,#ff5ea0);padding:2px;justify-self:end;animation:spin 14s linear infinite}
+.preview-4 .pv-orb-inner{width:100%;height:100%;border-radius:50%;background:#0d0c14;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.preview-4 .pv-orb-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.6rem;background:linear-gradient(135deg,#ff5ea0,#7c5cff,#5cffd3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.preview-4 .pv-orb-l{font-size:.55rem;color:#9c9aae;letter-spacing:.12em;text-transform:uppercase;margin-top:.15rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.card-body{padding:1.5rem 1.6rem}
+.card-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.card-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.5rem;letter-spacing:-.01em;margin-bottom:.45rem}
+.card-desc{color:var(--muted);font-size:.93rem;margin-bottom:1rem}
+.card-feats{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
+.card-feats span{font-family:'JetBrains Mono',monospace;font-size:.7rem;padding:.2rem .55rem;border-radius:5px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--muted)}
+.card-cta{display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:500;color:#7c5cff}
+
+.notes{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:2rem;backdrop-filter:blur(10px);margin-bottom:3rem}
+.notes h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.4rem;margin-bottom:1rem;letter-spacing:-.01em}
+.notes p{color:var(--muted);font-size:.95rem;margin-bottom:.65rem}
+.notes code{font-family:'JetBrains Mono',monospace;font-size:.82rem;padding:.15rem .4rem;background:rgba(255,255,255,.06);border-radius:5px;color:#5cffd3}
+
+footer{text-align:center;color:var(--dim);font-size:.85rem;padding-top:2rem;border-top:1px solid var(--line)}
+footer a{color:#7c5cff;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">04 designs · pick your favorite</span>
+    <h1>One profile, four <em>vibes</em>.</h1>
+    <p class="sub">Same content (built from your real LinkedIn data — 9 certifications, EPAM role, full career arc), four very different aesthetics. Click any preview to view it live.</p>
+    <div class="meta">
+      <span><strong>Kaushik Mandal</strong></span>
+      <span>EPAM Systems</span>
+      <span>9 certs</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <a href="design-1-cyberpunk/index.html" class="card">
+      <div class="preview preview-1">
+        <div class="pv-text">
+          <div class="pv-name">Kaushik Mandal.</div>
+          <div class="pv-sub">SOFTWARE ENGINEER @ EPAM</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">01 · Neon Cyberpunk</span>
+        <h3 class="card-title">Animated &amp; bold</h3>
+        <p class="card-desc">Dark mode with neon purple/cyan/pink glow, animated particle network, gradient text, and typing animation.</p>
+        <div class="card-feats"><span>Dark</span><span>Particles</span><span>Gradient</span><span>Type FX</span></div>
+        <div class="card-cta">View design →</div>
+      </div>
+    </a>
+
+    <a href="design-2-glass/index.html" class="card">
+      <div class="preview preview-2">
+        <div class="pv-text">
+          <div class="pv-eyebrow">Software Engineer · EPAM</div>
+          <div class="pv-name">Building <em>thoughtful</em> software.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">02 · Glass Minimal</span>
+        <h3 class="card-title">Editorial &amp; airy</h3>
+        <p class="card-desc">Light pastel mesh gradients, frosted glass cards, italic serif headlines. Reads like a magazine.</p>
+        <div class="card-feats"><span>Light</span><span>Serif</span><span>Glass</span><span>Editorial</span></div>
+        <div class="card-cta">View design →</div>
+      </div>
+    </a>
+
+    <a href="design-3-terminal/index.html" class="card">
+      <div class="preview preview-3">
+        <div><span class="green">$</span> <span class="cyan">whoami</span></div>
+        <div><span class="amber">name</span>&nbsp;&nbsp;&nbsp;&nbsp;Kaushik Mandal</div>
+        <div><span class="amber">role</span>&nbsp;&nbsp;&nbsp;&nbsp;Software Engineer</div>
+        <div><span class="amber">at</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EPAM Systems</div>
+        <div><span class="amber">certs</span>&nbsp;&nbsp;&nbsp;<span class="green">9 ✓</span></div>
+        <div style="margin-top:.5rem"><span class="green">$</span> <span class="cyan">cat ~/.profile</span></div>
+        <div class="dim">Cloud · GenAI · Java · RPA</div>
+        <div><span class="green">$</span> <span style="color:#00ff95;text-shadow:0 0 4px #00ff95">_</span></div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">03 · Terminal Hacker</span>
+        <h3 class="card-title">Monospace &amp; cool</h3>
+        <p class="card-desc">Green-on-black CLI aesthetic with matrix rain background, ASCII art header, and fake shell prompts.</p>
+        <div class="card-feats"><span>Mono</span><span>Matrix</span><span>CLI</span><span>ASCII</span></div>
+        <div class="card-cta">View design →</div>
+      </div>
+    </a>
+
+    <a href="design-4-3d/index.html" class="card">
+      <div class="preview preview-4">
+        <div class="pv-grid">
+          <div class="pv-name">KAUSHIK<br><span class="outline">MANDAL</span></div>
+          <div class="pv-orb"><div class="pv-orb-inner"><div class="pv-orb-num">9</div><div class="pv-orb-l">certs</div></div></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="card-tag">04 · 3D Interactive</span>
+        <h3 class="card-title">Playful &amp; alive</h3>
+        <p class="card-desc">Tilt-on-hover cards, mouse spotlight, custom cursor, animated mesh gradient, spinning conic orb, marquee skills.</p>
+        <div class="card-feats"><span>Tilt</span><span>Spotlight</span><span>Cursor</span><span>Mesh</span></div>
+        <div class="card-cta">View design →</div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="notes">
+    <h2>What's inside each folder</h2>
+    <p>Every design is self-contained: <code>index.html</code>, <code>styles.css</code>, <code>script.js</code>. No build step, no dependencies — drop it on any static host.</p>
+    <p>To preview locally: open the design's <code>index.html</code> directly in your browser, or run <code>python3 -m http.server 8000</code> from this folder and visit <code>localhost:8000</code>.</p>
+    <p>To pick a winner: copy that subfolder's files to your own repo, or just deploy it. See <code>README.md</code> for deploy + git instructions.</p>
+  </div>
+
+  <footer>
+    <span>Open any preview · all data pulled from your LinkedIn · <a href="README.md">read the docs</a></span>
+  </footer>
+</div>
+</body>
+</html>

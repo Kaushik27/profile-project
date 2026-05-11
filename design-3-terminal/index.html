@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>kaushik@epam:~$ profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<canvas id="matrix"></canvas>
+
+<div class="terminal">
+  <div class="term-bar">
+    <div class="term-dots"><span class="d r"></span><span class="d y"></span><span class="d g"></span></div>
+    <div class="term-title">kaushik@epam: ~/profile — zsh</div>
+    <div class="term-nav">
+      <a href="#whoami">whoami</a>
+      <a href="#work">work</a>
+      <a href="#certs">certs</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+
+  <div class="term-body">
+    <!-- BOOT -->
+    <div class="line"><span class="p">$</span> <span class="cmd">cat /etc/profile.d/welcome.sh</span></div>
+    <pre class="ascii">
+   __  __     __  __     __  __     ______     __  __     __     __  __
+  /\ \/ /    /\ \/\ \   /\ \/\ \   /\  ___\   /\ \_\ \   /\ \   /\ \/ /
+  \ \  _"-.  \ \ \_\ \  \ \ \_\ \  \ \___  \  \ \  __ \  \ \ \  \ \  _"-.
+   \ \_\ \_\  \ \_____\  \ \_____\  \/\_____\  \ \_\ \_\  \ \_\  \ \_\ \_\
+    \/_/\/_/   \/_____/   \/_____/   \/_____/   \/_/\/_/   \/_/   \/_/\/_/
+
+           M A N D A L  ·  Lead Software Engineer @ EPAM Systems
+    </pre>
+
+    <!-- WHOAMI -->
+    <div id="whoami" class="block">
+      <div class="line"><span class="p">$</span> <span class="cmd">whoami --verbose</span></div>
+      <div class="out">
+        <div class="kv"><span class="k">name</span>      Kaushik Mandal</div>
+        <div class="kv"><span class="k">role</span>      Lead Software Engineer</div>
+        <div class="kv"><span class="k">company</span>   EPAM Systems</div>
+        <div class="kv"><span class="k">focus</span>     Java · Spring Boot · AWS · Microservices · GenAI · Distributed Systems</div>
+        <div class="kv"><span class="k">status</span>    <span class="ok">● online</span>  ready for new opportunities</div>
+      </div>
+      <div class="line"><span class="p">$</span> <span class="cmd">cat about.txt</span></div>
+      <div class="out">
+        <p>Lead Software Engineer with 10+ years building scalable backend systems and distributed architectures using Java, Spring Boot, and microservices. Specialize in cloud-native solutions on AWS and Azure — high-throughput systems, async architectures (Kafka, SQS, SNS), and AI/LLM integration into real-world workflows. AWS Certified (Solutions Architect + Developer), Azure Certified, and Anthropic Solution Architect Certified.</p>
+      </div>
+    </div>
+
+    <!-- WORK -->
+    <div id="work" class="block">
+      <div class="line"><span class="p">$</span> <span class="cmd">history --work</span></div>
+      <div class="out">
+        <div class="job">
+          <div class="job-h"><span class="t">[Aug 2025–Now]</span> <span class="title">lead-software-engineer</span> <span class="at">@ EPAM Systems · Chicago, IL</span></div>
+          <div class="job-b">› Modernizing Search microservices · cloud-native migration · AI-assisted search · LLM-driven workflows</div>
+        </div>
+        <div class="job">
+          <div class="job-h"><span class="t">[Oct 2024–Jul 2025]</span> <span class="title">lead-software-engineer</span> <span class="at">@ EPAM Systems · Dallas, TX</span></div>
+          <div class="job-b">› Goldman Sachs risk remediation · Cigna Healthcare Small Group Initiative · ICHRA/QSHERA processing</div>
+        </div>
+        <div class="job">
+          <div class="job-h"><span class="t">[Nov 2022–Sep 2024]</span> <span class="title">lead-software-engineer</span> <span class="at">@ EPAM Systems · Remote</span></div>
+          <div class="job-b">› EEM Admin platform · backend microservices · AWS inter-service communication</div>
+        </div>
+        <div class="job">
+          <div class="job-h"><span class="t">[Mar 2021–Nov 2022]</span> <span class="title">senior-software-engineer</span> <span class="at">@ EPAM Systems · Pune, India</span></div>
+          <div class="job-b">› Translation service (31 languages, Lokalise) · feedback widget backend service</div>
+        </div>
+        <div class="job">
+          <div class="job-h"><span class="t">[Jun 2018–Mar 2021]</span> <span class="title">software-analyst</span> <span class="at">@ Principal Financial Group · Pune, India</span></div>
+          <div class="job-b">› FDX financial data feature · payment integrations (EFT/check/cash/refund) · Azure NLP chatbot · Hackathon 1st place</div>
+        </div>
+        <div class="job">
+          <div class="job-h"><span class="t">[Jun 2017–Jun 2018]</span> <span class="title">senior-software-engineer</span> <span class="at">@ Capgemini · Pune, India</span></div>
+          <div class="job-b">› JWT security · bulk cheque upload · automated escalation workflows</div>
+        </div>
+        <div class="job">
+          <div class="job-h"><span class="t">[Dec 2015–Jun 2017]</span> <span class="title">software-engineer</span> <span class="at">@ Capgemini · Pune, India</span></div>
+          <div class="job-b">› Payment processing batch jobs · Discover dispute tracking RESTful services · Spring Batch cheque monitoring</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div id="skills" class="block">
+      <div class="line"><span class="p">$</span> <span class="cmd">ls ~/skills</span></div>
+      <div class="out grid">
+        <div><span class="dir">lang/</span><br>&nbsp;&nbsp;java&nbsp;&nbsp;spring-boot&nbsp;&nbsp;spring-framework&nbsp;&nbsp;microservices</div>
+        <div><span class="dir">cloud/</span><br>&nbsp;&nbsp;aws&nbsp;&nbsp;azure&nbsp;&nbsp;kubernetes&nbsp;&nbsp;cloud-native</div>
+        <div><span class="dir">messaging/</span><br>&nbsp;&nbsp;kafka&nbsp;&nbsp;sqs&nbsp;&nbsp;sns&nbsp;&nbsp;event-driven-design</div>
+        <div><span class="dir">ai/</span><br>&nbsp;&nbsp;genai&nbsp;&nbsp;llm-integration&nbsp;&nbsp;ai-workflows&nbsp;&nbsp;anthropic-claude</div>
+      </div>
+    </div>
+
+    <!-- CERTS -->
+    <div id="certs" class="block">
+      <div class="line"><span class="p">$</span> <span class="cmd">cat ~/.certifications | sort -r</span></div>
+      <div class="out">
+<pre class="certs-table">
+ISSUED    ISSUER               CREDENTIAL                                          ID
+────────  ───────────────────  ──────────────────────────────────────────────────  ────────────────────
+Mar 2026  Anthropic            <span class="hl">Claude Certified Architect</span>                       7k8u6xjqjofv
+Apr 2024  New Relic            New Relic Observability Foundations                100196134
+Apr 2022  Amazon Web Services  <span class="hl">AWS Solutions Architect — Associate</span>              K7J39GLLM2BQQ1C9
+Oct 2021  Amazon Web Services  AWS Developer — Associate                          3TBVN04BE244QF34
+Jul 2021  Microsoft            Azure Fundamentals                                 990810669
+Jan 2019  Automation Anywhere  Advanced RPA Professional                          AAADVC-12429488
+Feb 2015  NIIT                 Oracle Java EE 5 Web Services Developer            —
+Apr 2014  HP                   Developing ASP.NET MVC Web Applications            —
+Sep 2012  NIIT                 Oracle Java SE 6 Programmer                        —
+
+</pre>
+        <div class="kv"><span class="k">total</span>     <span class="ok">9 certifications</span></div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="block">
+      <div class="line"><span class="p">$</span> <span class="cmd">cat /etc/contact.conf</span></div>
+      <div class="out">
+        <div class="kv"><span class="k">linkedin</span>  <a href="https://www.linkedin.com/in/kaushik-mandal-11a89b25/" target="_blank" rel="noopener">in/kaushik-mandal-11a89b25</a></div>
+        <div class="kv"><span class="k">email</span>     <a href="mailto:kaushikmandal27@gmail.com">kaushikmandal27@gmail.com</a></div>
+        <div class="kv"><span class="k">github</span>    <a href="https://github.com/Kaushik27" target="_blank" rel="noopener">github.com/Kaushik27</a></div>
+      </div>
+      <div class="line"><span class="p">$</span> <span class="cmd">echo "Thanks for visiting :)"</span></div>
+      <div class="out"><p>Thanks for visiting :)</p></div>
+      <div class="line"><span class="p">$</span> <span class="blinker">_</span></div>
+    </div>
+
+    <div class="term-footer">
+      <span>kaushik@epam:~$ uptime · <span id="year"></span></span>
+      <a href="../index.html">[ back to all designs ]</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
