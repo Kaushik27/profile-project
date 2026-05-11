@@ -1,8 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/design-1", "destination": "/design-1-cyberpunk/index.html" },
-    { "source": "/design-2", "destination": "/design-2-glass/index.html" },
-    { "source": "/design-3", "destination": "/design-3-terminal/index.html" },
-    { "source": "/design-4", "destination": "/design-4-3d/index.html" }
+  "redirects": [
+    { "source": "/design-1", "destination": "/design-1-cyberpunk/index.html", "permanent": false },
+    { "source": "/design-2", "destination": "/design-2-glass/index.html", "permanent": false },
+    { "source": "/design-3", "destination": "/design-3-terminal/index.html", "permanent": false },
+    { "source": "/design-4", "destination": "/design-4-3d/index.html", "permanent": false }
   ]
 }
