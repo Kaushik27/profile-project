@@ -3,188 +3,134 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kaushik Mandal</title>
-<meta http-equiv="refresh" content="0; url=design-1-cyberpunk/index.html" />
+<title>Kaushik Mandal — Neon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0d0d12;
-  --ink:#f4f3fa;
-  --muted:#a4a3b8;
-  --dim:#5a596d;
-  --line:rgba(255,255,255,.1);
-  --card:rgba(255,255,255,.04);
-  --card-strong:rgba(255,255,255,.08);
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;z-index:-1;background:
-  radial-gradient(circle at 20% 10%,rgba(124,92,255,.18),transparent 50%),
-  radial-gradient(circle at 80% 30%,rgba(255,94,160,.15),transparent 55%),
-  radial-gradient(circle at 50% 90%,rgba(92,255,211,.1),transparent 50%)}
-
-.wrap{max-width:1100px;margin:0 auto;padding:5rem 1.5rem 4rem}
-header{text-align:center;margin-bottom:4rem}
-.kicker{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:.35rem .85rem;border:1px solid var(--line);border-radius:999px;margin-bottom:1.5rem;background:var(--card);backdrop-filter:blur(10px)}
-h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.05;letter-spacing:-.025em;margin-bottom:1.25rem}
-h1 em{font-style:italic;background:linear-gradient(135deg,#ff5ea0,#7c5cff,#5cffd3);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:flow 8s ease infinite}
-@keyframes flow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.sub{font-size:1.15rem;color:var(--muted);max-width:600px;margin:0 auto 2rem}
-.meta{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;color:var(--dim);font-size:.85rem;font-family:'JetBrains Mono',monospace}
-.meta span strong{color:var(--ink);font-weight:500}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:1.5rem;margin-bottom:4rem}
-.card{position:relative;display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);transition:all .3s ease;cursor:pointer}
-.card:hover{transform:translateY(-4px);background:var(--card-strong);border-color:rgba(124,92,255,.4);box-shadow:0 16px 40px rgba(0,0,0,.4)}
-.preview{aspect-ratio:16/10;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
-
-/* Preview 1: cyberpunk */
-.preview-1{background:radial-gradient(circle at 25% 25%,rgba(179,75,255,.45),transparent 50%),radial-gradient(circle at 75% 75%,rgba(75,208,255,.4),transparent 55%),radial-gradient(circle at 50% 100%,rgba(255,75,141,.3),transparent 60%),#050510}
-.preview-1::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(120,130,220,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(120,130,220,.08) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 70%)}
-.preview-1 .pv-text{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:'JetBrains Mono',monospace;text-align:center}
-.preview-1 .pv-name{font-family:'Inter',sans-serif;font-size:1.8rem;font-weight:700;background:linear-gradient(135deg,#b34bff,#4bd0ff,#ff4b8d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.02em}
-.preview-1 .pv-sub{font-size:.7rem;color:#9ca0c8;margin-top:.4rem;letter-spacing:.1em}
-
-/* Preview 2: glass */
-.preview-2{background:radial-gradient(circle at 20% 10%,rgba(255,201,164,.55),transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,122,138,.5),transparent 55%),radial-gradient(circle at 50% 90%,rgba(124,92,255,.4),transparent 55%),#fbfaf7}
-.preview-2 .pv-text{position:absolute;inset:0;padding:1.5rem;display:flex;flex-direction:column;justify-content:center;color:#1a1a1f}
-.preview-2 .pv-eyebrow{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#6b6e78;margin-bottom:.5rem}
-.preview-2 .pv-name{font-family:'Fraunces',serif;font-weight:500;font-size:1.8rem;line-height:1.05;letter-spacing:-.02em}
-.preview-2 .pv-name em{font-style:italic;background:linear-gradient(120deg,#7c5cff,#ff7a8a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-
-/* Preview 3: terminal */
-.preview-3{background:#020806;font-family:'JetBrains Mono',monospace;padding:1rem 1.25rem;color:#e0fce6;font-size:.65rem;line-height:1.6;overflow:hidden}
-.preview-3 .green{color:#00ff95;text-shadow:0 0 4px #00ff95}
-.preview-3 .cyan{color:#7afff0}
-.preview-3 .amber{color:#ffb86c}
-.preview-3 .dim{color:#3a5e4b}
-
-/* Preview 4: 3D */
-.preview-4{background:radial-gradient(at 20% 25%,rgba(255,94,160,.3),transparent 50%),radial-gradient(at 80% 20%,rgba(124,92,255,.35),transparent 55%),radial-gradient(at 75% 80%,rgba(92,255,211,.2),transparent 55%),#0d0c14}
-.preview-4 .pv-grid{position:absolute;inset:0;display:grid;grid-template-columns:1.4fr 1fr;align-items:center;padding:1.5rem;gap:1rem}
-.preview-4 .pv-name{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.4rem;line-height:.9;letter-spacing:-.04em;color:#f0eef7}
-.preview-4 .pv-name .outline{-webkit-text-stroke:1.5px #f0eef7;-webkit-text-fill-color:transparent;background:linear-gradient(135deg,#ff5ea0,#7c5cff,#5cffd3);-webkit-background-clip:text;background-clip:text;background-size:200% 200%}
-.preview-4 .pv-orb{width:90px;height:90px;border-radius:50%;background:conic-gradient(from 0deg,#ff5ea0,#7c5cff,#5cffd3,#ffc94d,#ff5ea0);padding:2px;justify-self:end;animation:spin 14s linear infinite}
-.preview-4 .pv-orb-inner{width:100%;height:100%;border-radius:50%;background:#0d0c14;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.preview-4 .pv-orb-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.6rem;background:linear-gradient(135deg,#ff5ea0,#7c5cff,#5cffd3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
-.preview-4 .pv-orb-l{font-size:.55rem;color:#9c9aae;letter-spacing:.12em;text-transform:uppercase;margin-top:.15rem}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-.card-body{padding:1.5rem 1.6rem}
-.card-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
-.card-title{font-family:'Fraunces',serif;font-weight:500;font-size:1.5rem;letter-spacing:-.01em;margin-bottom:.45rem}
-.card-desc{color:var(--muted);font-size:.93rem;margin-bottom:1rem}
-.card-feats{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
-.card-feats span{font-family:'JetBrains Mono',monospace;font-size:.7rem;padding:.2rem .55rem;border-radius:5px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--muted)}
-.card-cta{display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:500;color:#7c5cff}
-
-.notes{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:2rem;backdrop-filter:blur(10px);margin-bottom:3rem}
-.notes h2{font-family:'Fraunces',serif;font-weight:500;font-size:1.4rem;margin-bottom:1rem;letter-spacing:-.01em}
-.notes p{color:var(--muted);font-size:.95rem;margin-bottom:.65rem}
-.notes code{font-family:'JetBrains Mono',monospace;font-size:.82rem;padding:.15rem .4rem;background:rgba(255,255,255,.06);border-radius:5px;color:#5cffd3}
-
-footer{text-align:center;color:var(--dim);font-size:.85rem;padding-top:2rem;border-top:1px solid var(--line)}
-footer a{color:#7c5cff;text-decoration:none}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="design-1-cyberpunk/styles.css" />
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <span class="kicker">04 designs · pick your favorite</span>
-    <h1>One profile, four <em>vibes</em>.</h1>
-    <p class="sub">Same content (built from your real LinkedIn data — 9 certifications, EPAM role, full career arc), four very different aesthetics. Click any preview to view it live.</p>
-    <div class="meta">
-      <span><strong>Kaushik Mandal</strong></span>
-      <span>EPAM Systems</span>
-      <span>9 certs</span>
+<canvas id="bg-particles"></canvas>
+<div class="grid-overlay"></div>
+<div class="glow-blob blob-1"></div>
+<div class="glow-blob blob-2"></div>
+<div class="glow-blob blob-3"></div>
+
+<nav class="nav">
+  <a href="#hero" class="nav-logo"><span class="logo-mark">KM</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in touch</button>
+</nav>
+
+<section id="hero" class="hero">
+  <div class="hero-inner">
+    <div class="badge"><span class="dot"></span><span>Available for opportunities</span></div>
+    <h1 class="hero-title"><span class="line">Hi, I'm</span><span class="line gradient-text">Kaushik Mandal.</span></h1>
+    <p class="hero-subtitle"><span id="typed-text"></span><span class="cursor">|</span></p>
+    <p class="hero-blurb">Lead Software Engineer at <a href="https://www.epam.com" target="_blank" rel="noopener" class="link-accent">EPAM Systems</a>. I build scalable backend systems and distributed architectures using Java, Spring Boot, and microservices on AWS and Azure.</p>
+    <div class="hero-cta">
+      <a href="#experience" class="btn btn-primary"><span>View my work</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#contact" class="btn btn-ghost">Contact me</a>
     </div>
-  </header>
-
-  <div class="grid">
-
-    <a href="design-1-cyberpunk/index.html" class="card">
-      <div class="preview preview-1">
-        <div class="pv-text">
-          <div class="pv-name">Kaushik Mandal.</div>
-          <div class="pv-sub">SOFTWARE ENGINEER @ EPAM</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <span class="card-tag">01 · Neon Cyberpunk</span>
-        <h3 class="card-title">Animated &amp; bold</h3>
-        <p class="card-desc">Dark mode with neon purple/cyan/pink glow, animated particle network, gradient text, and typing animation.</p>
-        <div class="card-feats"><span>Dark</span><span>Particles</span><span>Gradient</span><span>Type FX</span></div>
-        <div class="card-cta">View design →</div>
-      </div>
-    </a>
-
-    <a href="design-2-glass/index.html" class="card">
-      <div class="preview preview-2">
-        <div class="pv-text">
-          <div class="pv-eyebrow">Software Engineer · EPAM</div>
-          <div class="pv-name">Building <em>thoughtful</em> software.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <span class="card-tag">02 · Glass Minimal</span>
-        <h3 class="card-title">Editorial &amp; airy</h3>
-        <p class="card-desc">Light pastel mesh gradients, frosted glass cards, italic serif headlines. Reads like a magazine.</p>
-        <div class="card-feats"><span>Light</span><span>Serif</span><span>Glass</span><span>Editorial</span></div>
-        <div class="card-cta">View design →</div>
-      </div>
-    </a>
-
-    <a href="design-3-terminal/index.html" class="card">
-      <div class="preview preview-3">
-        <div><span class="green">$</span> <span class="cyan">whoami</span></div>
-        <div><span class="amber">name</span>&nbsp;&nbsp;&nbsp;&nbsp;Kaushik Mandal</div>
-        <div><span class="amber">role</span>&nbsp;&nbsp;&nbsp;&nbsp;Software Engineer</div>
-        <div><span class="amber">at</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EPAM Systems</div>
-        <div><span class="amber">certs</span>&nbsp;&nbsp;&nbsp;<span class="green">9 ✓</span></div>
-        <div style="margin-top:.5rem"><span class="green">$</span> <span class="cyan">cat ~/.profile</span></div>
-        <div class="dim">Cloud · GenAI · Java · RPA</div>
-        <div><span class="green">$</span> <span style="color:#00ff95;text-shadow:0 0 4px #00ff95">_</span></div>
-      </div>
-      <div class="card-body">
-        <span class="card-tag">03 · Terminal Hacker</span>
-        <h3 class="card-title">Monospace &amp; cool</h3>
-        <p class="card-desc">Green-on-black CLI aesthetic with matrix rain background, ASCII art header, and fake shell prompts.</p>
-        <div class="card-feats"><span>Mono</span><span>Matrix</span><span>CLI</span><span>ASCII</span></div>
-        <div class="card-cta">View design →</div>
-      </div>
-    </a>
-
-    <a href="design-4-3d/index.html" class="card">
-      <div class="preview preview-4">
-        <div class="pv-grid">
-          <div class="pv-name">KAUSHIK<br><span class="outline">MANDAL</span></div>
-          <div class="pv-orb"><div class="pv-orb-inner"><div class="pv-orb-num">9</div><div class="pv-orb-l">certs</div></div></div>
-        </div>
-      </div>
-      <div class="card-body">
-        <span class="card-tag">04 · 3D Interactive</span>
-        <h3 class="card-title">Playful &amp; alive</h3>
-        <p class="card-desc">Tilt-on-hover cards, mouse spotlight, custom cursor, animated mesh gradient, spinning conic orb, marquee skills.</p>
-        <div class="card-feats"><span>Tilt</span><span>Spotlight</span><span>Cursor</span><span>Mesh</span></div>
-        <div class="card-cta">View design →</div>
-      </div>
-    </a>
-
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num" data-target="10">0</div><div class="stat-label">Years in tech</div></div>
+      <div class="stat"><div class="stat-num stat-exact" data-target="9">0</div><div class="stat-label">Certifications</div></div>
+      <div class="stat"><div class="stat-num" data-target="20">0</div><div class="stat-label">Technologies</div></div>
+    </div>
   </div>
+</section>
 
-  <div class="notes">
-    <h2>What's inside each folder</h2>
-    <p>Every design is self-contained: <code>index.html</code>, <code>styles.css</code>, <code>script.js</code>. No build step, no dependencies — drop it on any static host.</p>
-    <p>To preview locally: open the design's <code>index.html</code> directly in your browser, or run <code>python3 -m http.server 8000</code> from this folder and visit <code>localhost:8000</code>.</p>
-    <p>To pick a winner: copy that subfolder's files to your own repo, or just deploy it. See <code>README.md</code> for deploy + git instructions.</p>
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header"><span class="section-num">01</span><h2 class="section-title">About <span class="gradient-text">me</span></h2></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a <strong>Lead Software Engineer</strong> with 10+ years of experience building scalable backend systems and distributed architectures using <strong>Java, Spring Boot, and microservices</strong>.</p>
+        <p>I specialize in designing cloud-native solutions on <strong>AWS and Azure</strong>, with a strong focus on performance, reliability, and maintainability. My work spans high-throughput systems, asynchronous architectures (Kafka, SQS, SNS), and end-to-end service design.</p>
+        <p>Recently focused on <strong>AI integration in real-world systems</strong> — embedding LLMs into workflows to improve search, decision-making, and developer productivity. AWS Certified (Solutions Architect, Developer) | Azure Certified | Anthropic Solution Architect Certified.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-card-row"><span class="kbd">$</span><span><span class="muted">whoami</span> → Kaushik Mandal</span></div>
+        <div class="about-card-row"><span class="kbd">$</span><span><span class="muted">role</span> → Lead Software Engineer</span></div>
+        <div class="about-card-row"><span class="kbd">$</span><span><span class="muted">company</span> → EPAM Systems</span></div>
+        <div class="about-card-row"><span class="kbd">$</span><span><span class="muted">focus</span> → Java · Spring Boot · AWS · Microservices · GenAI</span></div>
+        <div class="about-card-row"><span class="kbd">$</span><span><span class="muted">status</span> → <span class="status-online">building things</span></span></div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <footer>
-    <span>Open any preview · all data pulled from your LinkedIn · <a href="README.md">read the docs</a></span>
-  </footer>
-</div>
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-header"><span class="section-num">02</span><h2 class="section-title">Experience <span class="gradient-text">timeline</span></h2></div>
+    <div class="timeline">
+      <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-card"><div class="timeline-date">Aug 2025 – Present</div><h3 class="timeline-title">Lead Software Engineer</h3><div class="timeline-company">EPAM Systems · Chicago, IL (On-site)</div><p class="timeline-desc">Modernizing Search microservices by decommissioning legacy platforms and migrating to cloud-native architectures. Contributing to AI-assisted search and LLM-driven workflows to improve relevance and system intelligence.</p><div class="tag-row"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">LLM</span><span class="tag">Search</span><span class="tag">AWS</span></div></div></div>
+      <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-card"><div class="timeline-date">Oct 2024 – Jul 2025</div><h3 class="timeline-title">Lead Software Engineer</h3><div class="timeline-company">EPAM Systems · Dallas, TX (On-site)</div><p class="timeline-desc">Offshore Development Lead for Goldman Sachs risk remediation and Cigna Healthcare's Small Group Initiative. Feature development for microservices enabling ICHRA/QSHERA processing for Colorado state exchange.</p><div class="tag-row"><span class="tag">Java</span><span class="tag">Microservices</span><span class="tag">Cigna</span><span class="tag">Goldman Sachs</span></div></div></div>
+      <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-card"><div class="timeline-date">Nov 2022 – Sep 2024</div><h3 class="timeline-title">Lead Software Engineer</h3><div class="timeline-company">EPAM Systems · Remote</div><p class="timeline-desc">Developing backend microservices for EEM Admin platform facilitating accessibility and inter-communication with AWS resources across multiple services.</p><div class="tag-row"><span class="tag">Spring Framework</span><span class="tag">Cloud Architecture</span><span class="tag">AWS</span><span class="tag">Microservices</span></div></div></div>
+      <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-card"><div class="timeline-date">Mar 2021 – Nov 2022</div><h3 class="timeline-title">Senior Software Engineer</h3><div class="timeline-company">EPAM Systems · Pune, India (Remote)</div><p class="timeline-desc">Built a translation service supporting 31 languages using Lokalise. Created a feedback service for the feedback widget react component.</p><div class="tag-row"><span class="tag">Spring Framework</span><span class="tag">Cloud Architecture</span><span class="tag">i18n</span></div></div></div>
+      <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-card"><div class="timeline-date">Jun 2018 – Mar 2021</div><h3 class="timeline-title">Software Analyst</h3><div class="timeline-company">Principal Financial Group · Pune, India</div><p class="timeline-desc">Built FDX feature for financial data from mainframe/cloud, payment integrations (EFT, check, cash, refund), Azure NLP chatbot, and automated digital check processing. Won 1st place at Principal Hackathon.</p><div class="tag-row"><span class="tag">Java</span><span class="tag">Azure</span><span class="tag">NLP</span><span class="tag">Spring Framework</span></div></div></div>
+      <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-card"><div class="timeline-date">Jun 2017 – Jun 2018</div><h3 class="timeline-title">Senior Software Engineer</h3><div class="timeline-company">Capgemini · Pune, India</div><p class="timeline-desc">Enhanced application security with JWT, bulk cheque upload functionality, automated escalation process for digital cheque processing system.</p><div class="tag-row"><span class="tag">Spring Framework</span><span class="tag">JWT</span><span class="tag">REST</span><span class="tag">SOAP</span></div></div></div>
+      <div class="timeline-item"><div class="timeline-marker"></div><div class="timeline-card"><div class="timeline-date">Dec 2015 – Jun 2017</div><h3 class="timeline-title">Software Engineer</h3><div class="timeline-company">Capgemini · Pune, India</div><p class="timeline-desc">Developed batch jobs for payment processing, reporting and analytics. Tracked Discover disputes across business units using RESTful Web services. Built Spring Batch jobs for automated cheque monitoring.</p><div class="tag-row"><span class="tag">Spring Batch</span><span class="tag">Spring Framework</span><span class="tag">REST</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header"><span class="section-num">03</span><h2 class="section-title">Skills &amp; <span class="gradient-text">stack</span></h2></div>
+    <div class="skills-grid">
+      <div class="skill-group"><h3 class="skill-group-title">Languages &amp; Frameworks</h3><div class="skill-list"><span class="skill">Java</span><span class="skill">Spring Boot</span><span class="skill">Spring Framework</span><span class="skill">Microservices</span></div></div>
+      <div class="skill-group"><h3 class="skill-group-title">Cloud &amp; Infrastructure</h3><div class="skill-list"><span class="skill">AWS</span><span class="skill">Azure</span><span class="skill">Kubernetes</span><span class="skill">Cloud Native</span></div></div>
+      <div class="skill-group"><h3 class="skill-group-title">Messaging &amp; Distributed Systems</h3><div class="skill-list"><span class="skill">Kafka</span><span class="skill">SQS</span><span class="skill">SNS</span><span class="skill">Event-Driven Design</span></div></div>
+      <div class="skill-group"><h3 class="skill-group-title">AI &amp; Emerging Tech</h3><div class="skill-list"><span class="skill">GenAI</span><span class="skill">LLM Integration</span><span class="skill">AI Workflows</span><span class="skill">Anthropic Claude</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="section">
+  <div class="container">
+    <div class="section-header"><span class="section-num">04</span><h2 class="section-title">Certifications &amp; <span class="gradient-text">credentials</span></h2></div>
+    <p class="section-lead">9 industry credentials across cloud, AI, programming, and observability.</p>
+    <div class="cert-grid">
+      <article class="cert-card"><div class="cert-icon cert-icon-anthropic">AI</div><div class="cert-body"><div class="cert-name">Claude Certified Architect</div><div class="cert-meta"><span>Anthropic</span><span class="dot-sep">·</span><span class="cert-year">Mar 2026</span></div><div class="cert-credential">ID: 7k8u6xjqjofv</div></div><span class="cert-badge cert-badge-anthropic">GenAI</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-newrelic">◆</div><div class="cert-body"><div class="cert-name">New Relic Observability Foundations</div><div class="cert-meta"><span>New Relic</span><span class="dot-sep">·</span><span class="cert-year">Apr 2024</span></div><div class="cert-credential">ID: 100196134</div></div><span class="cert-badge cert-badge-newrelic">Observability</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-aws">AWS</div><div class="cert-body"><div class="cert-name">AWS Certified Solutions Architect — Associate</div><div class="cert-meta"><span>Amazon Web Services</span><span class="dot-sep">·</span><span class="cert-year">Apr 2022</span></div><div class="cert-credential">ID: K7J39GLLM2BQQ1C9</div></div><span class="cert-badge cert-badge-aws">AWS</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-aws">AWS</div><div class="cert-body"><div class="cert-name">AWS Certified Developer — Associate</div><div class="cert-meta"><span>Amazon Web Services</span><span class="dot-sep">·</span><span class="cert-year">Oct 2021</span></div><div class="cert-credential">ID: 3TBVN04BE244QF34</div></div><span class="cert-badge cert-badge-aws">AWS</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-azure">▲</div><div class="cert-body"><div class="cert-name">Microsoft Certified: Azure Fundamentals</div><div class="cert-meta"><span>Microsoft</span><span class="dot-sep">·</span><span class="cert-year">Jul 2021</span></div><div class="cert-credential">ID: 990810669</div></div><span class="cert-badge cert-badge-azure">Azure</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-rpa">⚙</div><div class="cert-body"><div class="cert-name">Automation Anywhere Advanced RPA Professional</div><div class="cert-meta"><span>Automation Anywhere</span><span class="dot-sep">·</span><span class="cert-year">Jan 2019</span></div><div class="cert-credential">ID: AAADVC-12429488</div></div><span class="cert-badge cert-badge-rpa">RPA</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-oracle">☕</div><div class="cert-body"><div class="cert-name">Oracle Certified Professional — Java EE 5 Web Services Developer</div><div class="cert-meta"><span>NIIT</span><span class="dot-sep">·</span><span class="cert-year">Feb 2015</span></div></div><span class="cert-badge cert-badge-oracle">Java</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-hp">{ }</div><div class="cert-body"><div class="cert-name">Developing ASP.NET MVC Web Applications</div><div class="cert-meta"><span>HP</span><span class="dot-sep">·</span><span class="cert-year">Apr 2014</span></div></div><span class="cert-badge cert-badge-hp">.NET</span></article>
+      <article class="cert-card"><div class="cert-icon cert-icon-oracle">☕</div><div class="cert-body"><div class="cert-name">Oracle Certified Professional — Java SE 6 Programmer</div><div class="cert-meta"><span>NIIT</span><span class="dot-sep">·</span><span class="cert-year">Sep 2012</span></div></div><span class="cert-badge cert-badge-oracle">Java</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header"><span class="section-num">05</span><h2 class="section-title">Let's <span class="gradient-text">connect</span></h2></div>
+    <div class="contact-card">
+      <p class="contact-lead">Got a project, a role, or just want to say hi? My inbox is open.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/kaushik-mandal-11a89b25/" target="_blank" rel="noopener" class="contact-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.13 1.45-2.13 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zM7.12 20.45H3.56V9h3.56v11.45z"/></svg><span>LinkedIn</span></a>
+        <a href="mailto:kaushikmandal27@gmail.com" class="contact-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Email</span></a>
+        <a href="https://github.com/Kaushik27" target="_blank" rel="noopener" class="contact-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.06-.02-2.07-3.34.72-4.04-1.61-4.04-1.61C4.42 17.84 3.63 17.5 3.63 17.5c-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.83 2.81 1.3 3.49.99.11-.78.42-1.3.76-1.6-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.29 0 .32.21.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg><span>GitHub</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Kaushik Mandal</span>
+  </div>
+</footer>
+
+<script src="design-1-cyberpunk/script.js"></script>
 </body>
 </html>

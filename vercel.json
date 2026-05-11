@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/design-2", "destination": "/design-2-glass/index.html" },
+    { "source": "/design-3", "destination": "/design-3-terminal/index.html" },
+    { "source": "/design-4", "destination": "/design-4-3d/index.html" }
+  ]
+}
